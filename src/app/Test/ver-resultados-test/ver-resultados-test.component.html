@@ -1,0 +1,26 @@
+<div class="resultados-container">
+    <h2>Resultados de Tests</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre del Perfil</th>
+          <th>Nombre del Test</th>
+          <th>Diagnóstico</th>
+          <th>Fecha</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resultado of resultados">
+          <td>{{ resultado.nombre_perfil }}</td>
+          <td>{{ resultado.test }}</td>
+          <td>{{ obtenerDiagnostico(resultado.diagnostico) }}</td>
+          <td>{{ resultado.fecha }}</td>
+          <td>
+            <div class="color-indicator" [ngStyle]="{'background-color': obtenerColor(obtenerDiagnostico(resultado.diagnostico))}"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Registro de Usuario</h2>
+    <form>
+      <label for="nombre_perfil">Nombre de Perfil:</label>
+      <input [(ngModel)]="registroUsuarioObj.nombre_perfil" type="text" id="nombre_perfil" name="nombre_perfil" required>
+  
+      <label for="correo">Correo:</label>
+      <input [(ngModel)]="registroUsuarioObj.correo" type="email" id="correo" name="correo" required>
+  
+      <label for="contrasenna">Contraseña:</label>
+      <input [(ngModel)]="registroUsuarioObj.contrasenna" type="password" id="contrasenna" name="contrasenna" required>
+  
+      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+      <input [(ngModel)]="registroUsuarioObj.fecha_nacimiento" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+  
+      <label for="numero">Número:</label>
+      <input [(ngModel)]="registroUsuarioObj.numero" type="text" id="numero" name="numero" required>
+  
+      <label for="ubigeo">Ubigeo:</label>
+      <input [(ngModel)]="registroUsuarioObj.ubigeo" type="text" id="ubigeo" name="ubigeo" required>
+  
+      <button (click)="onRegistroUsuario()" type="submit">Registrar Usuario</button>
+    </form>
+  </div>
+  

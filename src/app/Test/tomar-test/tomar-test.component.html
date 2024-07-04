@@ -1,0 +1,19 @@
+<div class="test-container" *ngIf="test">
+    <h2>{{ test.nombre }}</h2>
+    <p>{{ test.descripcion }}</p>
+  
+    <div *ngFor="let pregunta of preguntas; let i = index" class="test-question">
+      <h3>{{ pregunta.texto }}</h3>
+      <ul>
+        <li *ngFor="let opcion of opciones; let j = index">
+          <label>
+            <input type="radio" [name]="'pregunta-' + pregunta.id" [value]="j + 1" (change)="seleccionarRespuesta(i, j + 1)" [checked]="respuestas[i] === (j + 1)">
+            {{ opcion }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  
+    <button (click)="submitTest()">Enviar Test</button>
+  </div>
+  

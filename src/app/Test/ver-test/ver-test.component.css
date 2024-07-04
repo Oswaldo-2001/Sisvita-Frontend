@@ -1,0 +1,67 @@
+.test-list {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    background-color: #f0f0f0; /* Color de fondo del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow-x: auto; /* Barra de desplazamiento horizontal si es necesario */
+  }
+  
+  .test-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .test-list table {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    border-collapse: collapse; /* Colapso de bordes para una apariencia más limpia */
+    margin-top: 10px;
+  }
+  
+  .test-list th,
+  .test-list td {
+    padding: 12px 15px; /* Relleno interno de las celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Borde inferior delgado entre filas */
+  }
+  
+  .test-list th {
+    background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
+    font-weight: bold; /* Texto en negrita para el encabezado */
+  }
+  
+  .test-list tbody tr:hover {
+    background-color: #e0e0e0; /* Cambio de color de fondo al pasar el ratón */
+  }
+  
+  .test-list button {
+    padding: 8px 12px;
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    border-radius: 4px; /* Bordes redondeados para el botón */
+    cursor: pointer;
+  }
+  
+  .test-list button:hover {
+    background-color: #45a049; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Ajustes de respuesta para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .test-list {
+      max-width: 100%; /* Para ocupar el ancho completo en pantallas pequeñas */
+      padding: 10px;
+      overflow-x: auto;
+    }
+    
+    .test-list table {
+      font-size: 0.9rem; /* Reducción de tamaño de fuente para la tabla */
+    }
+    
+    .test-list button {
+      padding: 6px 10px; /* Ajuste de tamaño de botón para pantallas pequeñas */
+    }
+  }
+  

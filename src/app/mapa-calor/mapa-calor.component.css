@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Establece la altura al 100% del viewport */
+  }
+  
+  .top {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 10px; /* Añade un pequeño padding */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px; /* Añade un pequeño padding */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .google-map {
+    max-width: 100%; /* Ajusta el mapa al 100% del ancho disponible */
+    height: auto; /* Altura automática para ajustarse al contenedor */
+    max-height: 70vh; /* Altura máxima para no exceder el contenedor */
+    border: 1px solid #ccc; /* Borde opcional para claridad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional para claridad */
+  }
+  

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="top">
+      <h2>Mapa de Calor</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID Usuario</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Test</th>
+            <th>Diagnóstico</th>
+            <th>Color</th>
+            <th>Ubigeo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let resultado of resultados">
+            <td>{{ resultado.id_usuario }}</td>
+            <td>{{ resultado.nombre_perfil }}</td>
+            <td>{{ resultado.fecha }}</td>
+            <td>{{ resultado.test }}</td>
+            <td [style.color]="obtenerColor(obtenerDiagnostico(resultado.diagnostico))">
+              {{ obtenerDiagnostico(resultado.diagnostico) }}
+            </td>
+            <td>
+              <span class="circle" [style.background-color]="obtenerColor(obtenerDiagnostico(resultado.diagnostico))"></span>
+            </td>
+            <td>{{ resultado.ubigeo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bottom">
+      <google-map class="google-map" height="400px" width="750px" [center]="center" [zoom]="zoom">
+        <map-heatmap-layer [data]="heatmapData" [options]="heatmapOptions"></map-heatmap-layer>
+      </google-map>
+    </div>
+  </div>
+  

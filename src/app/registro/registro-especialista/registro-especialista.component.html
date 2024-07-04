@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Registro de Especialista</h2>
+    <form>
+      <label for="nombre_perfil">Nombre de Perfil:</label>
+      <input [(ngModel)]="registroEspecialistaObj.nombre_perfil" type="text" id="nombre_perfil" name="nombre_perfil" required>
+  
+      <label for="correo">Correo:</label>
+      <input [(ngModel)]="registroEspecialistaObj.correo" type="email" id="correo" name="correo" required>
+  
+      <label for="contrasenna">Contraseña:</label>
+      <input [(ngModel)]="registroEspecialistaObj.contrasenna" type="password" id="contrasenna" name="contrasenna" required>
+  
+      <label for="dni">DNI:</label>
+      <input [(ngModel)]="registroEspecialistaObj.dni" type="text" id="dni" name="dni" required>
+  
+      <label for="nombres">Nombres:</label>
+      <input [(ngModel)]="registroEspecialistaObj.nombres" type="text" id="nombres" name="nombres" required>
+  
+      <label for="apellidos">Apellidos:</label>
+      <input [(ngModel)]="registroEspecialistaObj.apellidos" type="text" id="apellidos" name="apellidos" required>
+  
+      <label for="numero_colegiatura">Número de Colegiatura:</label>
+      <input [(ngModel)]="registroEspecialistaObj.numero_colegiatura" type="text" id="numero_colegiatura" name="numero_colegiatura" required>
+  
+      <button (click)="onRegistroEspecialista()" type="submit">Registrar Especialista</button>
+    </form>
+  </div>
+  

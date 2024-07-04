@@ -1,0 +1,33 @@
+<div class="dashboard-container">
+    <div class="sidebar">
+      <div class="nombre-app">
+        <span>SISVITA</span>
+      </div>
+      <div class="profile">
+        <img src="perfil.png" alt="Profile Picture">
+        <h2>Hola, {{ user.nombre_perfil }}</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="javascript:void(0)" (click)="toggleMenu('test')">
+              <span>Test</span>
+            </a>
+            <ul [ngClass]="{'show': isMenuOpen['test']}">
+              <li><a href="javascript:void(0)" (click)="navigateTo('test-lista')">Hacer Test</a></li>
+              <li><a href="javascript:void(0)" (click)="navigateTo('test-resultados')">Ver Resultados de Test</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" (click)="logout()">
+              <span>Salir</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
