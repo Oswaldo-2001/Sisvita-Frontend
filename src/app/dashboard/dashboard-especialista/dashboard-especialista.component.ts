@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './dashboard-especialista.component.html',
-  styleUrl: './dashboard-especialista.component.css'
+  styleUrls: ['./dashboard-especialista.component.css']
 })
 export class DashboardEspecialistaComponent {
   user: any = { nombre_perfil: 'Especialista' };

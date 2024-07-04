@@ -8,6 +8,7 @@ import { VerTestComponent } from './Test/ver-test/ver-test.component';
 import { TomarTestComponent } from './Test/tomar-test/tomar-test.component';
 import { VerResultadosTestComponent } from './Test/ver-resultados-test/ver-resultados-test.component';
 import { MapaCalorComponent } from './mapa-calor/mapa-calor.component';
+import { ResultadosComponent } from './resultados/resultados.component';
 
 
 export const routes: Routes = [
@@ -26,8 +27,8 @@ export const routes: Routes = [
     path: 'dashboard_especialista',
     component: DashboardEspecialistaComponent,
     children: [
-      { path: 'mapa-calor', component: MapaCalorComponent }, // Asegúrate de crear el componente correspondiente
-      // Puedes agregar más rutas específicas para el especialista si es necesario
+      { path: 'mapa-calor', component: MapaCalorComponent },
+      { path: 'resultados', component: ResultadosComponent },
     ]
   },
   { path: 'registro_usuario', component: RegistroUsuarioComponent },

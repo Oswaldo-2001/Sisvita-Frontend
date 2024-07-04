@@ -79,5 +79,5 @@ export class MapaCalorComponent implements OnInit {
 
   center = { lat: -11.8464, lng: -77.1058 };
   zoom = 12;
-  heatmapOptions = { radius: 5 };
+  heatmapOptions = { radius: 20 };
 }

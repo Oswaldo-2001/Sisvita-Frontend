@@ -19,7 +19,7 @@
             <td>{{ resultado.nombre_perfil }}</td>
             <td>{{ resultado.fecha }}</td>
             <td>{{ resultado.test }}</td>
-            <td [style.color]="obtenerColor(obtenerDiagnostico(resultado.diagnostico))">
+            <td>
               {{ obtenerDiagnostico(resultado.diagnostico) }}
             </td>
             <td>

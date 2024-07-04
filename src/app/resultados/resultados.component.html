@@ -1,0 +1,46 @@
+<div class="resultados-container">
+    <div class="filtros">
+      <div>
+        <label for="filtro-test">Filtrar por Test:</label>
+        <input type="number" id="filtro-test" [(ngModel)]="filtroTestId">
+        <button (click)="filtrarPorTest()">Filtrar</button>
+      </div>
+      <div>
+        <label for="filtro-usuario">Filtrar por Usuario:</label>
+        <input type="number" id="filtro-usuario" [(ngModel)]="filtroUsuarioId">
+        <button (click)="filtrarPorUsuario()">Filtrar</button>
+      </div>
+    </div>
+  
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Test</th>
+            <th>Diagnóstico</th>
+            <th>Color</th>
+            <th>Número</th>
+            <th>whatsApp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let resultado of resultados">
+            <td>{{ resultado.id_usuario }}</td>
+            <td>{{ resultado.nombre_perfil }}</td>
+            <td>{{ resultado.fecha }}</td>
+            <td>{{ resultado.test }}</td>
+            <td>{{ obtenerDiagnostico(resultado.diagnostico) }}</td>
+            <td>
+              <div class="color-circle" [style.backgroundColor]="obtenerColor(obtenerDiagnostico(resultado.diagnostico))"></div>
+            </td>
+            <td>{{ resultado.numero }}</td>
+            <td><a [href]="generarWhatsAppUrl(resultado.numero, obtenerDiagnostico(resultado.diagnostico))" target="_blank"><button>whatsApp</button></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
